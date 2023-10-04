@@ -6,20 +6,32 @@ const subtract = function(num1, num2) {
 	return num1 - num2;
 };
 
-const sum = function(nums) {
-  let sum = 0;
-  for (let num in nums) {
-    sum += nums[num];
-  }
+const sum = function(array) {
+  let sum = array.reduce((total, number) => {
+    return total + number;
+  }, 0);
+
   return sum;
+
+  // let sum = 0;
+  // for (let num in nums) {
+  //   sum += nums[num];
+  // }
+  // return sum;
 };
 
-const multiply = function(nums) {
-  let outcome = 1;
-  for (let num in nums) {
-    outcome *= nums[num]
-  }
+const multiply = function(array) {
+  let outcome = array.reduce((total, number) => {
+    return total * number;
+  }, 1);
+
   return outcome;
+
+  // let outcome = 1;
+  // for (let num in nums) {
+  //   outcome *= nums[num]
+  // }
+  // return outcome;
 };
 
 const power = function(num, exponent) {
